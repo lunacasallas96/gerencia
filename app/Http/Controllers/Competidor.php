@@ -14,9 +14,9 @@ class Competidor extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'fk_empresa'
-        ,'fk_criterio'
-        ,'fk_escala'
+        'fk_empresa',
+        'fk_criterio',
+        'fk_escala',
     ];
     
     

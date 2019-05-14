@@ -12,6 +12,7 @@ use App\Http\Controller\Criterio;
 use App\Http\Controller\Empresas;
 use App\Http\Controller\Competidor;
 use App\User;
+use Barryvdh\DomPDF\Facade as PDF;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -174,6 +175,37 @@ class Controller extends BaseController
         return view('EditarEmpresa',[
             'empresa'=>$Empresa,
         ]);
+    }
+    public function Reporte(Request $request)
+	{
+        $Empresas = Empresas::all();
+        $Criterios = Criterio::all();
+    
+        foreach($Empresas as $Empresa){
+            $i=0;
+            $concatenado=[];
+            foreach($Criterios as $Criterio){
+                $CriterioAsig = Competidor::where('fk_empresa',$Empresa->id)->where('fk_criterio',$Criterio->id)->first();
+                if($CriterioAsig != null){
+                    $collection = collect([]);
+                    $collection->add($CriterioAsig->relacionEscala->descripcion);
+                    $concatenado[$i]= $collection;
+                    $i=$i+1;
+                }else{
+                    $collection = collect([]);
+                    $collection->add('No Aplica');
+                    $concatenado[$i]= $collection;
+                    $i=$i+1;
+
+                }
+            }
+           
+            $Empresa->offsetSet('Valores',$concatenado); 
+          //   return $Empresa->Valores[0];    
+        }
+
+        return PDF::loadView('reporte',compact('Empresas','Criterios'))->download('ReporteAnteproyectos.pdf');
+         
     }
     public function EditarEmpresas(Request $request)
 	{

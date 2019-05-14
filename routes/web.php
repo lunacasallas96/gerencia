@@ -37,6 +37,10 @@ Route::get('CompetidoresCriterios/{id?}', [
     'uses' =>'Controller@CompetidoresCriterios',
     'as' => 'Controller.competidoresCriterios'
 ]);
+Route::get('reporte/', [
+    'uses' =>'Controller@Reporte',
+    'as' => 'Controller.reporte'
+]);
 
 Route::get('Nuevo Criterio/', [
     'uses' =>'Controller@NuevoCriterio',
