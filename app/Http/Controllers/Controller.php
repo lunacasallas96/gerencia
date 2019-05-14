@@ -204,7 +204,7 @@ class Controller extends BaseController
           //   return $Empresa->Valores[0];    
         }
 
-        return PDF::loadView('reporte',compact('Empresas','Criterios'))->download('ReporteAnteproyectos.pdf');
+        return PDF::loadView('reporte',compact('Empresas','Criterios'))->download('ReporteGerencia.pdf');
          
     }
     public function EditarEmpresas(Request $request)

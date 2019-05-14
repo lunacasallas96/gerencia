@@ -16,7 +16,9 @@
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>-</th>    
+        <th>Empresas
+            /
+            Criterios</th>   
             @foreach($Criterios as $Criterio)
                 <th>{{$Criterio->descripcion}}</td>
             @endforeach

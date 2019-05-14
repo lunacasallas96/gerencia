@@ -56,9 +56,9 @@
 <body>
 	<div id="head">
 		<!-- Embeaded image :-) --> 
-   
+        <img src="{{ base_path('public/css/logo-San-Miguel.png')}}">
         <h1 class="features">REPORTE GENERADO POR</h1>
-        <p class="line">Plataforma Web De BENCHMARKING</p>
+        <p class="line">Pagina Web De BENCHMARKING</p>
         <p class="line">Gerencia</p>
         <p class="line">UNIVERSIDAD DE CUNDINAMARCA</p>
         <p class="line">05/2019</p>
@@ -73,7 +73,9 @@
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>-</th>    
+            <th>Empresas
+            /
+            Criterios</th>    
             @foreach($Criterios as $Criterio)
                 <th>{{$Criterio->descripcion}}</td>
             @endforeach

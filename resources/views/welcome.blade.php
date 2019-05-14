@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>GERENCIA (BENCHMARKING)</title>
+        <title>AGROINSUMOS SAN MIGUEL (BENCHMARKING)</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -80,10 +79,8 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                GERENCIA (BENCHMARKING)
-                </div>
-
+            <img src="{{ asset('css/logo-San-Miguel.png') }}">
+      
                
             </div>
         </div>
