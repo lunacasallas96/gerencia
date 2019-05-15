@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(EmpresasSeeder::class);
         $this->call(EscalaSeeder::class);
         $this->call(TipoCriterioSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
