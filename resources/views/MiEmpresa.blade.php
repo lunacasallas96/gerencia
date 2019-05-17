@@ -32,7 +32,6 @@
         <br>
         
         <a class="btn btn-primary" href="{{ route('Controller.competidoresCriterios') }}/1"> Editar Criterios</a>
-        <a class="btn btn-success" href="{{ route('Controller.reporte') }}"> Reporte</a>
         <br>
         <br>
     <h2>Graficas</h2>

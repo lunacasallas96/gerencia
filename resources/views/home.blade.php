@@ -23,6 +23,8 @@
                     <a class="btn btn-primary" href="{{ route('Controller.nuevocriterio') }}"> Criterios</a>
                     <a class="btn btn-primary" href="{{ route('Controller.usuarios') }}"> Usuarios</a>
                     <a class="btn btn-primary" href="{{ route('Controller.matriz') }}"> Matriz De Resultados</a>
+                    <a class="btn btn-success" href="{{ route('Controller.reporte') }}"> Reporte</a>
+     
                     @endif
                     @if($nombre != "Coordinador")
                     <a class="btn btn-primary" href="{{ route('Controller.empresausuarios') }}"> Mi Empresa</a>
